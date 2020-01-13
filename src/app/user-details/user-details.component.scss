@@ -1,0 +1,26 @@
+.image:hover {
+  transform: translate3d(0,-5px,0);
+}
+
+.mat-tab-group {
+ background-color: #303030;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  margin-top: 34px;
+}
+
+
+
+.main.footer {
+  position: fixed;
+  border-top: 1px solid #ccc;
+  bottom: 0;
+  width: 100%;
+  color: mediumpurple;
+}

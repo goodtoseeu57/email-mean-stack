@@ -1,0 +1,48 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <span>Custom Toolbar 1</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span>Custom Toolbar 2</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar class="big-toolbar">
+  <button mat-raised-button class="success-button" (click)="showMembers()"> Show the available members </button>
+</mat-toolbar>
+<div *ngIf="showDetails">
+  <mat-list *ngFor="let item of members" class="container">
+    <button mat-raised-button class="email" routerLink="/presentation/{{item.id}}"> {{item.email}} </button>
+    <div class="email"> {{item.score}} </div>
+    <button mat-raised-button color="warn" (click)="eventShow($event)"> event show </button>
+  </mat-list>
+
+</div>
+
+
+<div class="container-contact-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field  appearance="outline">
+      <mat-label>Message</mat-label>
+      <input style="height: 123px;"   matInput placeholder="Message" >
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button>Send</button>
+
+
+</div>
+
+
