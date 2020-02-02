@@ -44,6 +44,7 @@ mat-toolbar-row {
 }
 
 .container-contact-form  {
+  margin-bottom: 5%;
   .mat-form-field {
     width: 60%;
   }
@@ -59,4 +60,13 @@ mat-toolbar-row {
 .footer {
   flex-shrink: 0;
   margin-top: auto;
+}
+
+.mat-grid-tile {
+  background-color: coral;
+}
+
+.mat-grid-list {
+  margin-right: 12%;
+  margin-left: 12%;
 }

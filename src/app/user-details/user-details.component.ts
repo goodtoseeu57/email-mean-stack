@@ -1,8 +1,8 @@
-import { Component, OnInit ,  } from '@angular/core';
-import {ApiService} from '../services/api.service';
-import {ActivatedRoute} from '@angular/router';
-import {Location} from "@angular/common";
-import {Members} from '../../models/Members';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { Members } from '../../models/Members';
 
 @Component({
   selector: 'app-user-details',
@@ -13,25 +13,25 @@ export class UserDetailsComponent implements OnInit {
   user: any;
   selectedUser: Members;
 
-  constructor(private apiService: ApiService , private activatedRoute: ActivatedRoute, private location: Location ) { }
+  constructor(
+      private apiService: ApiService,
+      private activatedRoute: ActivatedRoute,
+      private location: Location
+  ) {}
 
   ngOnInit() {
     this.getUser();
   }
 
   getUser() {
-    const id = + this.activatedRoute.snapshot.paramMap.get('id');
-    this.apiService.getMember(id).subscribe(user => this.user = user);
+    const id = +this.activatedRoute.snapshot.paramMap.get('id');
+    this.apiService.getMember(id).subscribe(user => (this.user = user));
   }
   goBack() {
     this.location.back();
-
   }
 
-  selectUser(user: any , message: string) {
+  selectUser(user: any, message: string) {
     this.selectedUser = user;
-
-
   }
-
 }

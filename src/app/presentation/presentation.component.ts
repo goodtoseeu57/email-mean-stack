@@ -11,11 +11,17 @@ export class PresentationComponent implements OnInit {
 
   members: any = new Array<Members>();
   showDetails = false;
+  article = 'articleInput';
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.getMember();
+  }
+
+  displayEvent(count) {
+    console.log(count);
+
   }
   showMembers() {
     this.showDetails = !this.showDetails;

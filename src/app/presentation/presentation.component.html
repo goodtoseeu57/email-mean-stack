@@ -1,4 +1,4 @@
-<mat-toolbar color="warn">
+<mat-toolbar >
   <mat-toolbar-row>
     <span>Custom Toolbar 1</span>
   </mat-toolbar-row>
@@ -18,31 +18,47 @@
   </mat-list>
 
 </div>
+<mat-grid-list cols="3" rowHeight="7:3" gutterSize="6px">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
 
+</mat-grid-list>
 
 <div class="container-contact-form">
     <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Hint</mat-hint>
+      <mat-label>From</mat-label>
+      <input matInput placeholder="Email">
+      <mat-hint>Required</mat-hint>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Hint</mat-hint>
+      <mat-label>Subject</mat-label>
+      <input matInput placeholder="Subject">
+      <mat-hint>Required</mat-hint>
     </mat-form-field>
 
 
     <mat-form-field  appearance="outline">
       <mat-label>Message</mat-label>
       <input style="height: 123px;"   matInput placeholder="Message" >
-      <mat-hint>Hint</mat-hint>
+      <mat-hint>* Required</mat-hint>
     </mat-form-field>
 
     <button mat-raised-button>Send</button>
 
 
 </div>
+<!-- article event is the same name as the dumb component output's variable decorator
+display event is the function that takes the event from the dumb component
+
+see in the articles to check it out what happens in the dumb component
+-->
+<app-articles [article]="article" (articleEvent)="displayEvent($event)"></app-articles>
+
+
 
 

@@ -19,8 +19,9 @@ import { UserProductsComponent } from './user-products/user-products.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-
-
+import { MatGridListModule} from '@angular/material/grid-list';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ArticlesComponent } from './articles/articles.component';
 
 
 @NgModule({
@@ -28,13 +29,14 @@ import {MatInputModule} from '@angular/material/input';
     AppComponent,
     PresentationComponent,
     UserDetailsComponent,
-    UserProductsComponent
+    UserProductsComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, MatButtonModule, HttpClientModule, MatToolbarModule,
-    MatDividerModule, MatListModule, MatTabsModule, MatTabsModule, MatFormFieldModule, MatIconModule , MatInputModule
+    MatDividerModule, MatListModule, MatTabsModule, MatTabsModule, MatFormFieldModule, MatIconModule, MatInputModule, MatGridListModule , NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
